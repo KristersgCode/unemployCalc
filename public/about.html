@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flex justify-center">
+    <div
+      class="shadow-xl rounded-xl mt-10 flex justify-center bg-yellow-400 w-[300px] h-[500px]"
+    >
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="font-semibold">
+          Type your previous months salary to calculate your avarage salary
+        </h1>
+        <input id="result" placeholder="result" type="text" />
+      </div>
+    </div>
+    <script src="script.js">
+      document.getElementById("result").innerHTML=localStorage.getItem("textvalue")
+    </script>
+  </body>
+</html>

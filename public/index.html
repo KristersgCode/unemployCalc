@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flex justify-center">
+    <div
+      class="shadow-xl rounded-xl mt-10 flex justify-center bg-yellow-400 w-[300px] h-[500px]"
+    >
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="font-semibold">
+          Type your previous months salary to calculate your avarage salary
+        </h1>
+        <form class="mt-5 flex flex-col gap-y-4 mb-4" action="">
+          <input
+            id="calc-avarage1"
+            class="p-2"
+            type="text"
+            placeholder="month 1"
+          />
+          <input
+            id="calc-avarage2"
+            class="p-2"
+            type="text"
+            placeholder="month 2"
+          />
+          <input
+            id="calc-avarage3"
+            class="p-2"
+            type="text"
+            placeholder="month 3"
+          />
+        </form>
+        <!-- <a href="about.html "> -->
+        <button onclick="passvalues()" class="shadow-lg bg-slate-300 w-20 p-2">
+          calculate
+        </button>
+        <!-- </a> -->
+        <form action="about.html">
+          <input
+            type="submit"
+            value="Click"
+            id="result"
+            placeholder="result"
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
