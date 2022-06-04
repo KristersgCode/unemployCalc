@@ -7,50 +7,99 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="flex justify-center">
+  <body class="flex justify-center w-[100vw] h-[100vh]">
     <div
-      class="shadow-xl rounded-xl mt-10 flex justify-center bg-yellow-400 w-[300px] h-[500px]"
+      class="sm:shadow-xl sm:rounded-xl sm:mt-10 flex justify-center bg-yellow-400 sm:w-[400px] sm:h-[600px] w-[100vw] h-[100vh]"
     >
       <div class="flex flex-col items-center justify-center">
-        <h1 class="font-semibold">
-          Type your previous months salary to calculate your avarage salary
+        <h1 class="font-semibold w-[70%]">
+          Type your previous months salary to calculate your unemployment
+          benefits
         </h1>
-        <form class="mt-5 flex flex-col gap-y-4 mb-4" action="">
+        <form
+          method="post"
+          name="Form"
+          class="mt-5 flex flex-col gap-y-4 mb-4 w-72"
+          action=""
+        >
           <input
             id="calc-avarage1"
-            class="p-2"
+            class="p-2 alert"
+            name="answer_a"
             type="text"
-            placeholder="month 1"
+            placeholder="month 1 (EUR)"
           />
           <input
             id="calc-avarage2"
-            class="p-2"
+            class="p-2 alert"
+            name="answer_b"
             type="text"
-            placeholder="month 2"
+            placeholder="month 2 (EUR)"
           />
           <input
             id="calc-avarage3"
-            class="p-2"
+            name="answer_c"
+            class="p-2 alert"
             type="text"
-            placeholder="month 3"
+            placeholder="month 3 (EUR)"
           />
         </form>
-        <!-- <a href="about.html "> -->
-        <button onclick="passvalues()" class="shadow-lg bg-slate-300 w-20 p-2">
+        <button
+          onclick="calcAvarage(); return validateForm()"
+          class="shadow-lg bg-slate-300 w-20 p-2"
+        >
           calculate
         </button>
-        <!-- </a> -->
-        <form action="about.html">
-          <input
-            type="submit"
-            value="Click"
-            id="result"
-            placeholder="result"
-            type="text"
-          />
-        </form>
+        <div class="flex flex-col w-[70%] mb-10">
+          <div class="mt-4 flex justify-between flex-row items-center h-7">
+            <p class="text-sm">1st, 2nd month</p>
+            <p class="text-sm">100%</p>
+            <input
+              placeholder="EUR"
+              readonly
+              class="w-24 pl-2"
+              type="text"
+              id="result"
+            />
+          </div>
+          <div class="justify-between mt-4 flex flex-row items-center h-7">
+            <p class="text-sm">3rd, 4th month</p>
+            <p class="text-sm">75%</p>
+            <input
+              readonly
+              placeholder="EUR"
+              class="w-24 pl-2"
+              type="text"
+              id="0.75"
+            />
+          </div>
+
+          <div class="justify-between mt-4 flex flex-row items-center h-7">
+            <p class="text-sm">5th, 6th month</p>
+            <p class="text-sm">50%</p>
+            <input
+              placeholder="EUR"
+              readonly
+              class="w-24 pl-2"
+              type="text"
+              id="0.5"
+            />
+          </div>
+          <div class="justify-between mt-4 flex flex-row items-center h-7">
+            <p class="text-sm">6th, 7th month</p>
+            <p class="text-sm">45%</p>
+            <input
+              placeholder="EUR"
+              readonly
+              class="w-24 pl-2"
+              type="text"
+              id="0.45"
+            />
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
